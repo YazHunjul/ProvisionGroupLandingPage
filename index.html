@@ -16,7 +16,8 @@
     <!-- s -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -27,11 +28,11 @@
                 <img src="img/ProvisionLogo.png" alt="Provision Group" class="logo-img">
             </div>
             <div class="nav-links">
-                <a href="#what-we-do" class="nav-link">What We Do</a>
-                <a href="#ai-integration" class="nav-link">AI Integration</a>
+                <a href="#what-we-do" class="nav-link">Solutions</a>
+                <a href="#case-studies" class="nav-link">Case Studies</a>
                 <a href="#industries" class="nav-link">Industries</a>
-                <a href="#how-it-works" class="nav-link">How It Works</a>
-                <a href="#why-choose-us" class="nav-link">Why Choose Us</a>
+                <!-- <a href="#team" class="nav-link">Team</a> -->
+                <a href="#testimonials" class="nav-link">Testimonials</a>
                 <a href="#contact" class="nav-link contact-nav">Contact</a>
             </div>
             <div class="mobile-menu-btn">
@@ -44,6 +45,10 @@
 
     <!-- Hero Section -->
     <section class="hero">
+        <div class="hero-background">
+            <img src="img/0F7FA6D1-9048-4F7B-BF64-C468C4014951_1_201_a.jpeg" alt="Modern Industrial Facility" class="hero-bg-image">
+            <div class="hero-overlay"></div>
+        </div>
         <div class="hero-particles">
             <div class="particle"></div>
             <div class="particle"></div>
@@ -56,156 +61,646 @@
         </div>
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Automation Built for Industrial Efficiency.</h1>
-                <p class="hero-subtitle">We build custom software tools that automate reports, documents, and internal workflows — starting with HVAC and scaling across industries.</p>
-                <button class="cta-button">Let's Talk</button>
+                <div class="hero-badge">
+                    <span>🚀 Transforming Industries with AI</span>
+                </div>
+                <h1 class="hero-title">Automation Built for Industrial Excellence</h1>
+                <p class="hero-subtitle">We build custom software solutions that automate reports, documents, and workflows — delivering measurable results for HVAC, construction, and industrial companies across the Middle East.</p>
+                <div class="cta-buttons">
+                    <button class="cta-button primary">Let's Transform Your Business</button>
+                    <button class="cta-button secondary">View Our Work</button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Hours Saved Monthly</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Companies Automated</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">99.9%</span>
+                        <span class="stat-label">Accuracy Rate</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Trust Indicators -->
+    <!-- <section class="trust-section">
+        <div class="container">
+            <h3 class="trust-title">Trusted by Leading Companies</h3>
+            <div class="trust-logos">
+                <img src="https://via.placeholder.com/180x60/f8f9fa/6c757d?text=Company+Logo+1" alt="Client Logo" class="trust-logo">
+                <img src="https://via.placeholder.com/180x60/f8f9fa/6c757d?text=Company+Logo+2" alt="Client Logo" class="trust-logo">
+                <img src="https://via.placeholder.com/180x60/f8f9fa/6c757d?text=Company+Logo+3" alt="Client Logo" class="trust-logo">
+                <img src="https://via.placeholder.com/180x60/f8f9fa/6c757d?text=Company+Logo+4" alt="Client Logo" class="trust-logo">
+                <img src="https://via.placeholder.com/180x60/f8f9fa/6c757d?text=Company+Logo+5" alt="Client Logo" class="trust-logo">
+            </div>
+        </div>
+    </section> -->
 
     <!-- What We Do Section -->
     <section id="what-we-do" class="section">
         <div class="container">
-            <h2 class="section-title">What We Do</h2>
+            <div class="section-header">
+                <h2 class="section-title">Revolutionary Solutions for Modern Business</h2>
+                <p class="section-subtitle">We don't just build software — we craft intelligent automation systems that transform how you work.</p>
+            </div>
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <div class="icon icon-analytics"></div>
+                    <div class="feature-image">
+                        <img src="img/ChatGPT Image Jun 28 2025 (1).png" alt="AI Document Processing" class="feature-img">
                     </div>
-                    <h3 class="feature-title">Custom Report & Document Automation</h3>
-                    <p class="feature-description">Streamline your reporting processes with automated document generation tailored to your business needs.</p>
+                    <div class="feature-content">
+                        <div class="feature-icon">
+                            <div class="icon icon-ai"></div>
+                        </div>
+                        <h3 class="feature-title">AI-Powered Document Automation</h3>
+                        <p class="feature-description">Streamline your document-heavy departments by automatically scanning, understanding, and organizing high volumes of incoming files. Ideal for admin, HR, or compliance teams looking to eliminate bottlenecks.</p>
+                        <ul class="feature-benefits">
+                            <li>Automated form parsing and tagging</li>
+                            <li>Human-like understanding of scanned data</li>
+                            <li>Integrates with cloud storage and internal systems</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <div class="icon icon-ai"></div>
+                    <div class="feature-image">
+                        <img src="img/ChatGPT Image Jun 28 2025 from Industrial Automation.png" alt="Custom ERP Dashboard" class="feature-img">
                     </div>
-                    <h3 class="feature-title">AI-Powered Tools</h3>
-                    <p class="feature-description">Transform manual data entry and document processing into instant, accurate results. Our AI reads, understands, and processes your documents automatically, eliminating errors and saving hours of manual work.</p>
+                    <div class="feature-content">
+                        <div class="feature-icon">
+                            <div class="icon icon-dashboard"></div>
+                        </div>
+                        <h3 class="feature-title">Custom ERP & Workflow Systems</h3>
+                        <p class="feature-description">Empower teams on the ground with mobile-first dashboards that provide instant access to project progress, resource allocation, and compliance metrics. Built for industries that need results in real time.</p>
+                        <ul class="feature-benefits">
+                            <li>Field-team optimized dashboards</li>
+                            <li>Live equipment + personnel tracking</li>
+                            <li>Built-in alerts and KPI monitoring</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <div class="icon icon-dashboard"></div>
+                    <div class="feature-image">
+                        <img src="img/ChatGPT Image Jun 28 2025 from Industrial Automation (1).png" alt="Automated Reporting" class="feature-img">
                     </div>
-                    <h3 class="feature-title">Internal ERP Dashboards</h3>
-                    <p class="feature-description">Custom dashboards designed for both field teams and administrators to manage operations efficiently.</p>
+                    <div class="feature-content">
+                        <div class="feature-icon">
+                            <div class="icon icon-analytics"></div>
+                        </div>
+                        <h3 class="feature-title">Intelligent Report Generation</h3>
+                        <p class="feature-description">Convert complex raw data into polished, compliant, and client-ready reports at the click of a button. No formatting, no copy-paste — just instant professional output.</p>
+                        <ul class="feature-benefits">
+                            <li>Auto-fill regulatory and client templates</li>
+                            <li>Real-time summary previews</li>
+                            <li>Digital signature support built-in</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-image">
+                        <img src="img/ChatGPT Image Jun 28 2025 from Industrial Automation (2).png" alt="Custom Solutions" class="feature-img">
+                    </div>
+                    <div class="feature-content">
+                        <div class="feature-icon">
+                            <div class="icon icon-custom"></div>
+                        </div>
+                        <h3 class="feature-title">Custom Enterprise Solutions</h3>
+                        <p class="feature-description">Whether it's a niche tool or an end-to-end workflow platform, we custom-build enterprise solutions tailored to your operations — from finance to logistics to engineering.</p>
+                        <ul class="feature-benefits">
+                            <li>End-to-end digital transformation</li>
+                            <li>Built for scaling across departments</li>
+                            <li>Unified dashboards across teams</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- AI Integration Section -->
-    <section id="ai-integration" class="section ai-section">
+    <!-- Case Studies Section -->
+    <section id="case-studies" class="section case-studies-section">
         <div class="container">
-            <div class="ai-content">
-                <div class="ai-text">
-                    <h2 class="section-title">Smart AI Integration</h2>
-                    <p class="ai-description">We seamlessly incorporate AI into your business operations — from document generation to automated decision-making — helping you work faster, reduce errors, and focus on what matters.</p>
-                    <ul class="ai-benefits">
-                        <li><span class="check-icon"></span>Fewer manual tasks</li>
-                        <li><span class="check-icon"></span>Faster decisions</li>
-                        <li><span class="check-icon"></span>Smarter workflows</li>
-                    </ul>
-                </div>
-                <div class="ai-visual">
-                    <div class="ai-graphic">
-                        <div class="ai-node"></div>
-                        <div class="ai-node"></div>
-                        <div class="ai-node"></div>
-                        <div class="ai-connections"></div>
+            <div class="section-header">
+                <h2 class="section-title">Success Stories That Speak Volumes</h2>
+                <p class="section-subtitle">Real results from real businesses that trusted us to transform their operations.</p>
+            </div>
+            <div class="case-studies-grid">
+                <div class="case-study-card">
+                    <div class="case-study-image">
+                        <img src="img/Halton.jpg" alt="HVAC Company Case Study" class="case-study-img">
+                        <div class="case-study-overlay">
+                            <button class="view-case-btn">View Full Case Study</button>
+                        </div>
+                    </div>
+                    <div class="case-study-content">
+                        <div class="case-study-category">HVAC Digital Transformation</div>
+                        <h3 class="case-study-title">Halton</h3>
+                        <p class="case-study-description">Transformed operations across service, sales, and engineering departments with tailored automation solutions. Streamlined maintenance scheduling, automated proposal generation, and digitized engineering workflows. Our solutions helped reduce manual data entry by 95%, automate complex engineering calculations, and create instant professional reports from field data.</p>
+                        <div class="case-study-achievements">
+                            <span class="achievement"> Automated service report generation</span>
+                            <span class="achievement"> Smart maintenance scheduling system</span>
+                            <span class="achievement"> Engineering calculation automation</span>
+                        </div>
+                        <div class="case-study-results">
+                            <div class="result-item">
+                                <span class="result-number">90%</span>
+                                <span class="result-label">Time Saved</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-number">3x</span>
+                                <span class="result-label">Faster Response</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-number">98%</span>
+                                <span class="result-label">Customer Satisfaction</span>
+                            </div>
+                        </div>
+                        <div class="case-study-highlights">
+                            <span class="highlight-tag">Service Automation</span>
+                            <span class="highlight-tag">Sales Enablement</span>
+                            <span class="highlight-tag">Engineering Tools</span>
+                        </div>
                     </div>
                 </div>
-            </div>
+                <div class="case-study-card">
+                    <div class="case-study-image">
+                        <img src="img/ChatGPT Image Jun 28 2025 from Industrial Automation (7).png" alt="AI Integration Case Study" class="case-study-img">
+                        <div class="case-study-overlay">
+                            <button class="view-case-btn">View Full Case Study</button>
+                        </div>
+                    </div>
+                    <div class="case-study-content">
+                        <div class="case-study-category">AI Workflow Integration</div>
+                        <h3 class="case-study-title">A1 Integrated Solutions</h3>
+                        <p class="case-study-description">Revolutionized business operations by integrating AI into core workflows. Automated document processing, implemented smart data extraction, and created predictive maintenance systems. Our AI solutions now handle complex decision-making tasks that previously required manual review.</p>
+                        <div class="case-study-achievements">
+                            <span class="achievement">Intelligent document processing with 99% accuracy</span>
+                            <span class="achievement">Predictive maintenance reducing downtime by 60%</span>
+                            <span class="achievement">Automated decision-making workflows</span>
+                        </div>
+                        <div class="case-study-results">
+                            <div class="result-item">
+                                <span class="result-number">85%</span>
+                                <span class="result-label">Process Automation</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-number">60%</span>
+                                <span class="result-label">Cost Reduction</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-number">24/7</span>
+                                <span class="result-label">AI Operations</span>
+                            </div>
+                        </div>
+                        <div class="case-study-features">
+                            <span class="feature-tag">AI Integration</span>
+                            <span class="feature-tag">Smart Workflows</span>
+                            <span class="feature-tag">Process Automation</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="case-study-card">
+                    <div class="case-study-image">
+                        <img src="https://via.placeholder.com/500x300/1a1a1a/D4AF37?text=Manufacturing+Automation" alt="Manufacturing Case Study" class="case-study-img">
+                        <div class="case-study-overlay">
+                            <button class="view-case-btn">View Full Case Study</button>
+                        </div>
+                    </div>
+                    <div class="case-study-content">
+                        <div class="case-study-category">Manufacturing</div>
+                        <h3 class="case-study-title">Middle East Manufacturing Co.</h3>
+                        <p class="case-study-description">Automated quality control documentation and inventory management for improved operational efficiency.</p>
+                        <div class="case-study-results">
+                            <div class="result-item">
+                                <span class="result-number">60%</span>
+                                <span class="result-label">Efficiency Gain</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-number">24/7</span>
+                                <span class="result-label">Monitoring</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-number">ROI</span>
+                                <span class="result-label">in 4 Months</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
         </div>
     </section>
 
-    <!-- Industries We Serve Section -->
-    <section id="industries" class="section">
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section testimonials-section">
         <div class="container">
-            <h2 class="section-title">Industries We Serve</h2>
-            <p class="industries-subtitle">Starting with HVAC and expanding across sectors that rely on complex workflows and documentation.</p>
-            <div class="industries-grid">
-                <div class="industry-card">
-                    <div class="industry-icon">
-                        <div class="icon icon-building"></div>
-                    </div>
-                    <h3>HVAC & Climate Control</h3>
-                    <p>Automate service reports, maintenance schedules, and compliance documentation for HVAC companies across the Middle East.</p>
-                </div>
-                <div class="industry-card">
-                    <div class="industry-icon">
-                        <div class="icon icon-construction"></div>
-                    </div>
-                    <h3>Construction & Engineering</h3>
-                    <p>Streamline project documentation, safety reports, and regulatory compliance for construction and engineering firms.</p>
-                </div>
-                <div class="industry-card">
-                    <div class="industry-icon">
-                        <div class="icon icon-manufacturing"></div>
-                    </div>
-                    <h3>Manufacturing</h3>
-                    <p>Optimize production reports, quality control documentation, and inventory management processes.</p>
-                </div>
-                <div class="industry-card">
-                    <div class="industry-icon">
-                        <div class="icon icon-energy"></div>
-                    </div>
-                    <h3>Utilities & Energy</h3>
-                    <p>Automate maintenance logs, inspection reports, and regulatory compliance for utility and energy companies.</p>
-                </div>
+            <div class="section-header">
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-subtitle">Don't just take our word for it — hear from the companies we've transformed.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section id="how-it-works" class="section process-section">
-        <div class="container">
-            <h2 class="section-title">How It Works</h2>
-            <div class="process-grid">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <h3>Discover & Analyze</h3>
-                    <p>We study your current workflows, identify bottlenecks, and map out automation opportunities that deliver the highest ROI.</p>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">"Provision Group transformed our entire operation. What used to take our team 8 hours now takes 45 minutes. The ROI was immediate and continues to compound every month."</p>
+                        <div class="testimonial-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                    </div>
+                    <!-- <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/80x80/D4AF37/ffffff?text=Client+1" alt="Client Photo" class="author-photo">
+                        <div class="author-info">
+                            <h4 class="author-name">Khalid Al-Ahmed</h4>
+                            <p class="author-role">Operations Director</p>
+                            <p class="author-company">AlArabiya Climate Solutions</p>
+                        </div>
+                    </div> -->
                 </div>
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <h3>Design & Build</h3>
-                    <p>Our team creates custom solutions tailored to your specific needs, integrating seamlessly with your existing systems.</p>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">"The level of expertise and attention to detail is unmatched. They didn't just deliver software — they delivered a competitive advantage that sets us apart in the market."</p>
+                        <div class="testimonial-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                    </div>
+                    <!-- <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/80x80/D4AF37/ffffff?text=Client+2" alt="Client Photo" class="author-photo">
+                        <div class="author-info">
+                            <h4 class="author-name">Fatima Rashid</h4>
+                            <p class="author-role">CEO</p>
+                            <p class="author-company">Gulf Construction Group</p>
+                        </div>
+                    </div> -->
                 </div>
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <h3>Deploy & Train</h3>
-                    <p>We implement the solution with minimal disruption and provide comprehensive training to ensure your team maximizes the benefits.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">4</div>
-                    <h3>Support & Optimize</h3>
-                    <p>Ongoing support and continuous optimization ensure your automation solution evolves with your business needs.</p>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">"Working with Provision Group felt like having an extension of our own team. They understood our industry challenges and delivered solutions that exceeded our expectations."</p>
+                        <div class="testimonial-rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                    </div>
+                    <!-- <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/80x80/D4AF37/ffffff?text=Client+3" alt="Client Photo" class="author-photo">
+                        <div class="author-info">
+                            <h4 class="author-name">Mohammed Bin Zayed</h4>
+                            <p class="author-role">Plant Manager</p>
+                            <p class="author-company">Middle East Manufacturing Co.</p>
+                        </div>
+                    </div> -->
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Results Section -->
+    
+    <!-- Technology Stack Section -->
+    <section class="tech-stack-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Powered by Advanced Technology</h2>
+                <p class="section-subtitle">We leverage cutting-edge artificial intelligence, cloud computing, and modern development practices to deliver robust, scalable solutions that grow with your business.</p>
+            </div>
+            <div class="tech-overview">
+                <div class="tech-highlight">
+                    <div class="tech-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Artificial Intelligence</h3>
+                    <p>Advanced machine learning algorithms for document processing, data extraction, and predictive analytics</p>
+                </div>
+                <div class="tech-highlight">
+                    <div class="tech-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Cloud Infrastructure</h3>
+                    <p>Scalable cloud platforms ensuring reliability, security, and seamless integration with your existing systems</p>
+                </div>
+                <div class="tech-highlight">
+                    <div class="tech-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile-First Design</h3>
+                    <p>Responsive solutions that work perfectly on any device, from desktop dashboards to mobile field applications</p>
+                </div>
+                <div class="tech-highlight">
+                    <div class="tech-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Enterprise Security</h3>
+                    <p>Bank-level security protocols and compliance standards to protect your sensitive business data</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries We Serve Section -->
+    <section id="industries" class="section industries-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Industries We Transform</h2>
+                <p class="section-subtitle">Starting with HVAC and expanding across sectors that rely on complex workflows and documentation.</p>
+            </div>
+            <div class="industries-grid">
+                <div class="industry-card">
+                    <div class="industry-image">
+                        <img src="img/ChatGPT Image Jun 28 2025 from Industrial Automation (3).png" alt="HVAC Industry" class="industry-img">
+                    </div>
+                    <div class="industry-content">
+                        <div class="industry-icon">
+                            <div class="icon icon-building"></div>
+                        </div>
+                        <h3>HVAC & Climate Control</h3>
+                        <p>Automate service reports, maintenance schedules, and compliance documentation for HVAC companies across the Middle East.</p>
+                        <div class="industry-features">
+                            <span class="feature-tag">Service Automation</span>
+                            <span class="feature-tag">Compliance Tracking</span>
+                            <span class="feature-tag">Mobile Workforce</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="industry-card">
+                    <div class="industry-image">
+                        <img src="img/ChatGPT Image Jun 28 2025 from Industrial Automation (4).png" alt="Construction Industry" class="industry-img">
+                    </div>
+                    <div class="industry-content">
+                        <div class="industry-icon">
+                            <div class="icon icon-construction"></div>
+                        </div>
+                        <h3>Construction & Engineering</h3>
+                        <p>Streamline project documentation, safety reports, and regulatory compliance for construction and engineering firms.</p>
+                        <div class="industry-features">
+                            <span class="feature-tag">Project Management</span>
+                            <span class="feature-tag">Safety Compliance</span>
+                            <span class="feature-tag">Progress Tracking</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="industry-card">
+                    <div class="industry-image">
+                        <img src="img/ChatGPT Image Jun 28 2025 from Industrial Automation (5).png" alt="Manufacturing Industry" class="industry-img">
+                    </div>
+                    <div class="industry-content">
+                        <div class="industry-icon">
+                            <div class="icon icon-manufacturing"></div>
+                        </div>
+                        <h3>Manufacturing</h3>
+                        <p>Optimize production reports, quality control documentation, and inventory management processes.</p>
+                        <div class="industry-features">
+                            <span class="feature-tag">Quality Control</span>
+                            <span class="feature-tag">Inventory Management</span>
+                            <span class="feature-tag">Production Tracking</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="industry-card">
+                    <div class="industry-image">
+                        <img src="img/ChatGPT Image Jun 28 2025 Industrial Automation.png" alt="Energy Industry" class="industry-img">
+                    </div>
+                    <div class="industry-content">
+                        <div class="industry-icon">
+                            <div class="icon icon-energy"></div>
+                        </div>
+                        <h3>Utilities & Energy</h3>
+                        <p>Automate maintenance logs, inspection reports, and regulatory compliance for utility and energy companies.</p>
+                        <div class="industry-features">
+                            <span class="feature-tag">Maintenance Automation</span>
+                            <span class="feature-tag">Regulatory Reports</span>
+                            <span class="feature-tag">Asset Management</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="industry-card">
+                    <div class="industry-image">
+                        <img src="img/ChatGPT Image Jun 28 2025 from Industrial Automation (6).png" alt="Cross Industry Solutions" class="industry-img">
+                    </div>
+                    <div class="industry-content">
+                        <div class="industry-icon">
+                            <div class="icon icon-innovation"></div>
+                        </div>
+                        <h3>Your Industry Next</h3>
+                        <p>Our automation expertise extends across all sectors. If your industry relies on complex documentation, field operations, or regulatory compliance — we can transform it.</p>
+                        <div class="industry-features">
+                            <span class="feature-tag">Adaptable Solutions</span>
+                            <span class="feature-tag">Industry-Specific AI</span>
+                            <span class="feature-tag">Rapid Implementation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <!-- <section id="team" class="section team-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Meet the Visionaries Behind Your Success</h2>
+                <p class="section-subtitle">Our world-class team combines deep technical expertise with industry knowledge to deliver exceptional results.</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="https://via.placeholder.com/300x300/D4AF37/ffffff?text=CEO+Photo" alt="CEO Portrait" class="member-photo">
+                        <div class="member-overlay">
+                            <div class="social-links">
+                                <a href="#" class="social-link">LinkedIn</a>
+                                <a href="#" class="social-link">Twitter</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Sarah Al-Mansouri</h3>
+                        <p class="member-role">CEO & Founder</p>
+                        <p class="member-bio">15+ years in industrial automation. Former McKinsey consultant specializing in Middle East industrial transformation.</p>
+                        <div class="member-expertise">
+                            <span class="expertise-tag">Strategy</span>
+                            <span class="expertise-tag">Automation</span>
+                            <span class="expertise-tag">Leadership</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="https://via.placeholder.com/300x300/D4AF37/ffffff?text=CTO+Photo" alt="CTO Portrait" class="member-photo">
+                        <div class="member-overlay">
+                            <div class="social-links">
+                                <a href="#" class="social-link">LinkedIn</a>
+                                <a href="#" class="social-link">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Ahmed Hassan</h3>
+                        <p class="member-role">CTO & Co-Founder</p>
+                        <p class="member-bio">AI/ML expert with 12+ years at Google and Microsoft. PhD in Computer Science from MIT.</p>
+                        <div class="member-expertise">
+                            <span class="expertise-tag">AI/ML</span>
+                            <span class="expertise-tag">Architecture</span>
+                            <span class="expertise-tag">Innovation</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="https://via.placeholder.com/300x300/D4AF37/ffffff?text=VP+Engineering+Photo" alt="VP Engineering Portrait" class="member-photo">
+                        <div class="member-overlay">
+                            <div class="social-links">
+                                <a href="#" class="social-link">LinkedIn</a>
+                                <a href="#" class="social-link">Portfolio</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Maria Rodriguez</h3>
+                        <p class="member-role">VP of Engineering</p>
+                        <p class="member-bio">Full-stack engineering leader with experience scaling teams at Uber and Amazon. Expert in cloud architecture.</p>
+                        <div class="member-expertise">
+                            <span class="expertise-tag">Engineering</span>
+                            <span class="expertise-tag">Cloud</span>
+                            <span class="expertise-tag">Scaling</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="https://via.placeholder.com/300x300/D4AF37/ffffff?text=Head+of+Sales+Photo" alt="Head of Sales Portrait" class="member-photo">
+                        <div class="member-overlay">
+                            <div class="social-links">
+                                <a href="#" class="social-link">LinkedIn</a>
+                                <a href="#" class="social-link">Email</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Omar Khalil</h3>
+                        <p class="member-role">Head of Business Development</p>
+                        <p class="member-bio">20+ years in Middle East B2B sales. Deep relationships across HVAC, construction, and manufacturing sectors.</p>
+                        <div class="member-expertise">
+                            <span class="expertise-tag">Sales</span>
+                            <span class="expertise-tag">Partnerships</span>
+                            <span class="expertise-tag">Market Knowledge</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="section process-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Proven Process</h2>
+                <p class="section-subtitle">From discovery to deployment, we follow a systematic approach that ensures success.</p>
+            </div>
+            <div class="process-timeline">
+                <div class="timeline-line"></div>
+                <div class="process-step">
+                    <div class="step-content">
+                        <div class="step-number">1</div>
+                        <h3>Discover & Analyze</h3>
+                        <p>We study your current workflows, identify bottlenecks, and map out automation opportunities that deliver the highest ROI. Our team conducts in-depth interviews and process audits.</p>
+                        <div class="step-deliverables">
+                            <span class="deliverable">Process Audit Report</span>
+                            <span class="deliverable">ROI Analysis</span>
+                            <span class="deliverable">Automation Roadmap</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-content">
+                        <div class="step-number">2</div>
+                        <h3>Design & Prototype</h3>
+                        <p>Our team creates custom solutions tailored to your specific needs, integrating seamlessly with your existing systems. We build interactive prototypes for your feedback.</p>
+                        <div class="step-deliverables">
+                            <span class="deliverable">System Architecture</span>
+                            <span class="deliverable">UI/UX Prototypes</span>
+                            <span class="deliverable">Technical Specifications</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-content">
+                        <div class="step-number">3</div>
+                        <h3>Build & Test</h3>
+                        <p>We develop and rigorously test your solution using agile methodologies. Regular demos ensure you're involved throughout the development process.</p>
+                        <div class="step-deliverables">
+                            <span class="deliverable">MVP Development</span>
+                            <span class="deliverable">Quality Assurance</span>
+                            <span class="deliverable">Performance Testing</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-content">
+                        <div class="step-number">4</div>
+                        <h3>Deploy & Scale</h3>
+                        <p>We implement the solution with minimal disruption and provide comprehensive training. Ongoing support ensures continuous optimization as your business grows.</p>
+                        <div class="step-deliverables">
+                            <span class="deliverable">Production Deployment</span>
+                            <span class="deliverable">Team Training</span>
+                            <span class="deliverable">24/7 Support</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="results" class="section results-section">
         <div class="container">
-            <h2 class="section-title">Real Results for Real Businesses</h2>
+            <div class="section-header">
+                <h2 class="section-title">Results That Speak for Themselves</h2>
+                <p class="section-subtitle">Measurable impact across every metric that matters to your business.</p>
+            </div>
             <div class="results-grid">
                 <div class="result-stat">
-                    <div class="stat-number">85%</div>
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-number">90%</div>
                     <div class="stat-label">Time Saved on Reports</div>
-                    <p>Average time reduction in document generation and processing</p>
+                    <p>Average time reduction in document generation and processing across all clients</p>
                 </div>
                 <div class="result-stat">
-                    <div class="stat-number">99.9%</div>
+                    <div class="stat-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="stat-number">98%</div>
                     <div class="stat-label">Accuracy Rate</div>
                     <p>Elimination of manual data entry errors through AI automation</p>
                 </div>
                 <div class="result-stat">
-                    <div class="stat-number">3-6</div>
+                    <div class="stat-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="stat-number">6</div>
                     <div class="stat-label">Months ROI</div>
-                    <p>Typical payback period for our automation solutions</p>
+                    <p>Average payback period for our automation solutions</p>
                 </div>
                 <div class="result-stat">
+                    <div class="stat-icon">
+                        <i class="fas fa-infinity"></i>
+                    </div>
                     <div class="stat-number">24/7</div>
                     <div class="stat-label">Automated Processing</div>
                     <p>Round-the-clock document and workflow automation</p>
@@ -214,72 +709,81 @@
         </div>
     </section>
 
-    <!-- Why Choose Us Section -->
-    <section id="why-choose-us" class="section">
-        <div class="container">
-            <h2 class="section-title">Why Choose Us</h2>
-            <div class="benefits-grid">
-                <div class="benefit-item">
-                    <div class="benefit-icon">
-                        <div class="icon icon-target"></div>
-                    </div>
-                    <h3>Tailored Solutions</h3>
-                    <p>Custom-built software designed specifically for your business requirements and workflows.</p>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">
-                        <div class="icon icon-growth"></div>
-                    </div>
-                    <h3>Built to Scale</h3>
-                    <p>Future-proof solutions that grow with your business and adapt to changing needs.</p>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">
-                        <div class="icon icon-security"></div>
-                    </div>
-                    <h3>Secure & Reliable</h3>
-                    <p>Enterprise-grade security and reliability you can trust for your critical operations.</p>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">
-                        <div class="icon icon-lightning"></div>
-                    </div>
-                    <h3>AI-Ready</h3>
-                    <p>Cutting-edge AI integration capabilities to keep you ahead of the competition.</p>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">
-                        <div class="icon icon-global"></div>
-                    </div>
-                    <h3>Trusted by HVAC Firms in the Middle East</h3>
-                    <p>Proven track record with industry leaders who rely on our solutions daily.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Contact Section -->
     <section id="contact" class="section contact-section">
+        <div class="contact-background">
+            <img src="https://via.placeholder.com/1920x600/1a1a1a/D4AF37?text=Modern+Office+Space" alt="Modern Office" class="contact-bg-image">
+            <div class="contact-overlay"></div>
+        </div>
         <div class="container">
-            <h2 class="section-title">Let's Talk</h2>
-            <p class="contact-subtitle">Ready to automate your business operations? Get in touch with us today.</p>
-            <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                <div class="form-row">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2 class="section-title">Ready to Transform Your Business?</h2>
+                    <p class="contact-subtitle">Let's discuss how we can automate your operations and drive exceptional results. Book a free consultation today.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">📧</div>
+                            <div class="method-info">
+                                <h4>Email Us</h4>
+                                <p>hello@provisiongroup.co</p>
+                            </div>
+                        </div>
+                        <!-- <div class="contact-method">
+                            <div class="method-icon">📞</div>
+                            <div class="method-info">
+                                <h4>Call Us</h4>
+                                <p>+971 4 XXX XXXX</p>
+                            </div>
+                        </div> -->
+                        <!-- <div class="contact-method">
+                            <div class="method-icon">📍</div>
+                            <div class="method-info">
+                                <h4>Visit Us</h4>
+                                <p>Dubai Internet City, UAE</p>
+                            </div>
+                        </div> -->
                     </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
-                    </div>
+
+                    <!-- <div class="office-image">
+                        <img src="https://via.placeholder.com/400x250/D4AF37/ffffff?text=Provision+Group+Office" alt="Our Office" class="office-img">
+                    </div> -->
                 </div>
-                <div class="form-group">
-                    <input type="text" id="company" name="company" placeholder="Company Name" required>
+                
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <h3 class="form-title">Get Your Free Automation Assessment</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="company" name="company" placeholder="Company Name" required>
+                            </div>
+                            <div class="form-group">
+                                <select id="industry" name="industry" required>
+                                    <option value="">Select Industry</option>
+                                    <option value="hvac">HVAC & Climate Control</option>
+                                    <option value="construction">Construction & Engineering</option>
+                                    <option value="manufacturing">Manufacturing</option>
+                                    <option value="energy">Utilities & Energy</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Tell us about your automation needs and current challenges..." rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Get Your Free Assessment</button>
+                        <p class="form-disclaimer">We'll respond within 24 hours with a customized automation strategy.</p>
+                    </form>
                 </div>
-                <div class="form-group">
-                    <textarea id="message" name="message" placeholder="Tell us about your automation needs..." rows="6" required></textarea>
-                </div>
-                <button type="submit" class="submit-button">Send Message</button>
-            </form>
+            </div>
         </div>
     </section>
 
@@ -287,10 +791,43 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="img/ProvisionLogo.png" alt="Provision Group" class="logo-img">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <img src="img/ProvisionLogo.png" alt="Provision Group" class="footer-logo">
+                        <p class="footer-description">Building the future of industrial automation with AI-powered solutions that transform how businesses operate.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link">LinkedIn</a>
+                            <a href="#" class="social-link">Twitter</a>
+                            <a href="#" class="social-link">Email</a>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <div class="link-group">
+                            <h4>Solutions</h4>
+                            <a href="#what-we-do">AI Document Processing</a>
+                            <a href="#what-we-do">Custom ERP Systems</a>
+                            <a href="#what-we-do">Report Automation</a>
+                            <a href="#industries">Industry Solutions</a>
+                        </div>
+                        <div class="link-group">
+                            <h4>Company</h4>
+                            <a href="#team">About Us</a>
+                            <a href="#case-studies">Case Studies</a>
+                            <a href="#testimonials">Testimonials</a>
+                            <a href="#contact">Contact</a>
+                        </div>
+                        <div class="link-group">
+                            <h4>Industries</h4>
+                            <a href="#industries">HVAC & Climate</a>
+                            <a href="#industries">Construction</a>
+                            <a href="#industries">Manufacturing</a>
+                            <a href="#industries">Energy & Utilities</a>
+                        </div>
+                    </div>
                 </div>
-                <p class="footer-text">© 2024 Provision Group. Building the future of industrial automation.</p>
+                <div class="footer-bottom">
+                    <p class="footer-text">© 2024 Provision Group. All rights reserved. | Transforming Middle East Industries with AI</p>
+                </div>
             </div>
         </div>
     </footer>

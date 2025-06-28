@@ -115,7 +115,145 @@ This landing page template is created for Provision Group. All rights reserved.
 ---
 
 _Built with ❤️ for modern web standards and optimal user experience._
+
 # ProvisionGroup-LandingPage
+
 # ProvisionGroupLandingPage
+
 # ProvisionGroupLandingPage
+
 # ProvisionGroupLandingPage
+
+# Provision Group Website - Image Implementation Guide
+
+## 🎯 Image Requirements & File Naming
+
+### **1. Hero Section**
+
+- **File:** `hero-background.jpg` (1920x1080px)
+- **Current placeholder:** `https://via.placeholder.com/1920x1080/1a1a1a/C5A572?text=Modern+Industrial+Automation+Facility`
+- **Replace in:** `index.html` line ~45
+
+### **2. Trust Section - Client Logos**
+
+- **Files:** `client-logo-1.png` to `client-logo-5.png` (180x60px)
+- **Current placeholders:** `https://via.placeholder.com/180x60/f8f9fa/6c757d?text=Company+Logo+1`
+- **Replace in:** `index.html` lines ~85-89
+
+### **3. Feature Images**
+
+- **File 1:** `ai-document-processing.jpg` (400x250px)
+- **File 2:** `custom-erp-dashboard.jpg` (400x250px)
+- **File 3:** `automated-reporting.jpg` (400x250px)
+- **Replace in:** `index.html` lines ~110, 125, 140
+
+### **4. Case Study Images**
+
+- **File 1:** `case-study-hvac.jpg` (500x300px)
+- **File 2:** `case-study-construction.jpg` (500x300px)
+- **File 3:** `case-study-manufacturing.jpg` (500x300px)
+- **Replace in:** `index.html` lines ~185, 210, 235
+
+### **5. Team Photos**
+
+- **File 1:** `team-ceo.jpg` (300x300px)
+- **File 2:** `team-cto.jpg` (300x300px)
+- **File 3:** `team-vp-engineering.jpg` (300x300px)
+- **File 4:** `team-business-dev.jpg` (300x300px)
+- **Replace in:** `index.html` lines ~320, 340, 360, 380
+
+### **6. Industry Images**
+
+- **File 1:** `industry-hvac.jpg` (400x200px)
+- **File 2:** `industry-construction.jpg` (400x200px)
+- **File 3:** `industry-manufacturing.jpg` (400x200px)
+- **File 4:** `industry-energy.jpg` (400x200px)
+- **Replace in:** `index.html` lines ~275, 290, 305, 320
+
+### **7. Process Step Images**
+
+- **File 1:** `process-discovery.jpg` (150x150px)
+- **File 2:** `process-design.jpg` (150x150px)
+- **File 3:** `process-build.jpg` (150x150px)
+- **File 4:** `process-deploy.jpg` (150x150px)
+- **Replace in:** `index.html` lines ~420, 435, 450, 465
+
+### **8. Testimonial Photos**
+
+- **File 1:** `client-photo-1.jpg` (80x80px)
+- **File 2:** `client-photo-2.jpg` (80x80px)
+- **File 3:** `client-photo-3.jpg` (80x80px)
+- **Replace in:** `index.html` lines ~510, 530, 550
+
+### **9. Results Section Icons**
+
+- **File 1:** `stat-icon-time.png` (100x100px)
+- **File 2:** `stat-icon-accuracy.png` (100x100px)
+- **File 3:** `stat-icon-roi.png` (100x100px)
+- **File 4:** `stat-icon-247.png` (100x100px)
+- **Replace in:** `index.html` lines ~580, 590, 600, 610
+
+### **10. Contact Section**
+
+- **File 1:** `contact-background.jpg` (1920x600px)
+- **File 2:** `office-photo.jpg` (400x250px)
+- **Replace in:** `index.html` lines ~635, 670
+
+## 🚀 Quick Replace Instructions
+
+1. **Save all images** in the `img/` folder
+2. **Find and replace** placeholder URLs with your image paths:
+
+```html
+<!-- BEFORE -->
+<img src="https://via.placeholder.com/..." alt="..." />
+
+<!-- AFTER -->
+<img src="img/your-image-name.jpg" alt="..." />
+```
+
+## 📱 Image Optimization Tips
+
+- **File formats:** Use JPG for photos, PNG for logos/graphics
+- **File sizes:** Keep under 500KB for fast loading
+- **Dimensions:** Follow the sizes listed above for best quality
+- **Compression:** Use tools like TinyPNG to optimize file sizes
+
+## 🎨 ChatGPT Image Generation Prompts
+
+### Hero Background:
+
+"Modern industrial automation facility with sleek machinery, digital displays, and warm golden lighting. Professional, high-tech atmosphere. Wide panoramic view, photorealistic style."
+
+### Case Studies:
+
+"Professional HVAC dashboard interface showing automation controls, charts, and data analytics. Clean UI design with golden accents. Screenshot style."
+
+### Team Photos:
+
+"Professional headshot of confident [description] in modern business attire. Clean background, executive portrait style."
+
+### Industry Images:
+
+"Modern [industry] environment with advanced technology, clean professional setting, and digital monitoring systems."
+
+## 📧 Contact Information to Update
+
+Don't forget to update these placeholder contact details:
+
+- **Email:** hello@provisiongroup.ae
+- **Phone:** +971 4 XXX XXXX
+- **Address:** Dubai Internet City, UAE
+
+---
+
+## 🎯 Priority Order for Implementation
+
+1. **Hero background** (most impactful)
+2. **Team photos** (builds trust)
+3. **Case study images** (shows results)
+4. **Industry images** (demonstrates expertise)
+5. **Client logos** (social proof)
+6. **Remaining images** (polish and details)
+
+Once you have the images, simply replace the placeholder URLs with your image file paths and your website will look absolutely professional and amazing! 🚀
