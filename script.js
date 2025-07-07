@@ -317,11 +317,18 @@ function initContactForm() {
 function validateForm(data) {
     const errors = [];
     
+    console.log('🔍 Form validation debug:', data);
+    
     if (!data.name || data.name.trim().length < 2) {
         errors.push('Please enter a valid name (at least 2 characters)');
     }
     
     if (!data.email || !isValidEmail(data.email)) {
+        console.log('❌ Email validation failed:', {
+            emailExists: !!data.email,
+            emailValue: data.email,
+            emailType: typeof data.email
+        });
         errors.push('Please enter a valid email address');
     }
     
@@ -649,9 +656,19 @@ function initIconEffects() {
 
 // Utility functions
 function isValidEmail(email) {
-    // More robust email validation regex that handles most valid email formats
-    const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
-    return emailRegex.test(email.trim());
+    // Simplified but reliable email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const trimmedEmail = email.trim();
+    const result = emailRegex.test(trimmedEmail);
+    
+    console.log('🔍 Email validation debug:', {
+        originalEmail: email,
+        trimmedEmail: trimmedEmail,
+        isValid: result,
+        regex: emailRegex.toString()
+    });
+    
+    return result;
 }
 
 function showNotification(message, type = 'info') {
