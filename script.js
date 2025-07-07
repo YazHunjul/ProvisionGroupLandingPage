@@ -347,7 +347,7 @@ function validateField(field) {
     // Remove existing error styles
     field.classList.remove('error');
     
-    // Validate based on field type
+    // Validate based on field type and name
     switch (field.type) {
         case 'email':
             isValid = isValidEmail(value);
@@ -355,10 +355,16 @@ function validateField(field) {
         case 'text':
             if (field.name === 'name' || field.name === 'company') {
                 isValid = value.length >= 2;
+            } else if (field.name === '_replyto') {
+                // Handle email field with _replyto name
+                isValid = isValidEmail(value);
             }
             break;
         case 'textarea':
             isValid = value.length >= 10;
+            break;
+        case 'select-one':
+            isValid = value && value !== '';
             break;
     }
     
@@ -643,8 +649,9 @@ function initIconEffects() {
 
 // Utility functions
 function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
+    // More robust email validation regex that handles most valid email formats
+    const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+    return emailRegex.test(email.trim());
 }
 
 function showNotification(message, type = 'info') {
