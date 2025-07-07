@@ -206,13 +206,13 @@ function initContactForm() {
     if (!contactForm) return;
     
     // Form submission handling
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
         
         // Get form data
         const formData = new FormData(contactForm);
         const name = formData.get('name');
-        const email = formData.get('email');
+        const email = formData.get('_replyto');
         const company = formData.get('company');
         const industry = formData.get('industry');
         const message = formData.get('message');
@@ -225,6 +225,14 @@ function initContactForm() {
             return;
         }
         
+        // Get reCAPTCHA token
+        const recaptchaResponse = grecaptcha.getResponse();
+        if (!recaptchaResponse) {
+            showNotification('Please complete the reCAPTCHA verification.', 'error');
+            return;
+        }
+        formData.append('g-recaptcha-response', recaptchaResponse);
+        
         // Enhanced form submission with loading state
         const submitButton = contactForm.querySelector('.submit-button');
         const originalText = submitButton.textContent;
@@ -233,14 +241,41 @@ function initContactForm() {
         submitButton.disabled = true;
         submitButton.style.transform = 'scale(0.98)';
         
-        // Simulate API call (replace with actual form submission)
-        setTimeout(() => {
-            showNotification(
-                `Thank you, ${name}! We'll get back to you within 24 hours with a customized automation strategy for ${company}.`,
-                'success'
-            );
+        try {
+            // Submit to Formspree
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
             
-            contactForm.reset();
+            const result = await response.json();
+            
+            if (response.ok) {
+                showNotification(
+                    `Thank you, ${name}! We'll get back to you within 24 hours with a customized automation strategy for ${company}.`,
+                    'success'
+                );
+                
+                contactForm.reset();
+                grecaptcha.reset(); // Reset reCAPTCHA
+                
+                // If _next URL is specified, redirect after a short delay
+                const nextUrl = contactForm.querySelector('input[name="_next"]')?.value;
+                if (nextUrl) {
+                    setTimeout(() => {
+                        window.location.href = nextUrl;
+                    }, 2000);
+                }
+            } else {
+                throw new Error(result.error || 'Form submission failed. Please try again.');
+            }
+        } catch (error) {
+            showNotification(error.message, 'error');
+            grecaptcha.reset(); // Reset reCAPTCHA on error
+        } finally {
             submitButton.innerHTML = originalText;
             submitButton.disabled = false;
             submitButton.style.transform = '';
@@ -250,11 +285,7 @@ function initContactForm() {
             setTimeout(() => {
                 contactForm.style.animation = '';
             }, 500);
-            
-            // Track conversion (replace with actual analytics)
-            console.log('🎯 Contact form submitted successfully!', { name, email, company, industry });
-            
-        }, 2500);
+        }
     });
 
     // Enhanced form field interactions
