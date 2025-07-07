@@ -226,7 +226,15 @@ function initContactForm() {
         }
         
         // Get reCAPTCHA token
-        const recaptchaResponse = grecaptcha.getResponse();
+        let recaptchaResponse = '';
+        try {
+            if (typeof grecaptcha !== 'undefined') {
+                recaptchaResponse = grecaptcha.getResponse();
+            }
+        } catch (error) {
+            console.log('reCAPTCHA error:', error);
+        }
+        
         if (!recaptchaResponse) {
             showNotification('Please complete the reCAPTCHA verification.', 'error');
             return;
@@ -260,7 +268,9 @@ function initContactForm() {
                 );
                 
                 contactForm.reset();
-                grecaptcha.reset(); // Reset reCAPTCHA
+                if (typeof grecaptcha !== 'undefined') {
+                    grecaptcha.reset(); // Reset reCAPTCHA
+                }
                 
                 // If _next URL is specified, redirect after a short delay
                 const nextUrl = contactForm.querySelector('input[name="_next"]')?.value;
@@ -274,7 +284,9 @@ function initContactForm() {
             }
         } catch (error) {
             showNotification(error.message, 'error');
-            grecaptcha.reset(); // Reset reCAPTCHA on error
+            if (typeof grecaptcha !== 'undefined') {
+                grecaptcha.reset(); // Reset reCAPTCHA on error
+            }
         } finally {
             submitButton.innerHTML = originalText;
             submitButton.disabled = false;
@@ -317,18 +329,11 @@ function initContactForm() {
 function validateForm(data) {
     const errors = [];
     
-    console.log('🔍 Form validation debug:', data);
-    
     if (!data.name || data.name.trim().length < 2) {
         errors.push('Please enter a valid name (at least 2 characters)');
     }
     
     if (!data.email || !isValidEmail(data.email)) {
-        console.log('❌ Email validation failed:', {
-            emailExists: !!data.email,
-            emailValue: data.email,
-            emailType: typeof data.email
-        });
         errors.push('Please enter a valid email address');
     }
     
@@ -658,17 +663,7 @@ function initIconEffects() {
 function isValidEmail(email) {
     // Simplified but reliable email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const trimmedEmail = email.trim();
-    const result = emailRegex.test(trimmedEmail);
-    
-    console.log('🔍 Email validation debug:', {
-        originalEmail: email,
-        trimmedEmail: trimmedEmail,
-        isValid: result,
-        regex: emailRegex.toString()
-    });
-    
-    return result;
+    return emailRegex.test(email.trim());
 }
 
 function showNotification(message, type = 'info') {
